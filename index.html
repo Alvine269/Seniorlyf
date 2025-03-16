@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Senior 4 For Lyf</title>
+  <!-- Google Fonts for professional typography -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <!-- Lightbox2 CSS for image viewing -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #f7f8fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    /* Header */
+    header {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-family: "Algerian", cursive;
+      font-size: 32px;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    /* Dropdown Styles */
+    .dropdown {
+      position: relative;
+      margin-left: 20px;
+    }
+    .dropdown-toggle {
+      cursor: pointer;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .dropdown-toggle:hover {
+      background: rgba(255,255,255,0.1);
+    }
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      background: #fff;
+      color: #333;
+      min-width: 180px;
+      border-radius: 4px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      overflow: hidden;
+      z-index: 1000;
+    }
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+      transition: background 0.3s;
+    }
+    .dropdown-menu a:hover {
+      background: #f1f1f1;
+    }
+    .dropdown-menu.animate {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Welcome Section */
+    .welcome {
+      padding: 50px 30px;
+      text-align: center;
+      background: #e9eff6;
+    }
+    .welcome h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    .welcome p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    /* Section Styling */
+    section {
+      padding: 40px 30px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 10px;
+    }
+    /* Image Grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .image-grid img {
+      width: 100%;
+      display: block;
+      border-radius: 4px;
+      transition: transform 0.3s;
+    }
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+    /* Video Grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .video-grid iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+      border-radius: 4px;
+    }
+    /* Audio List */
+    .audio-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .audio-item {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+    .audio-item audio {
+      width: 100%;
+      outline: none;
+    }
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form label {
+      font-weight: 500;
+      display: block;
+      margin: 15px 0 5px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .contact-form button {
+      background: #2a5298;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+      margin-top: 15px;
+    }
+    .contact-form button:hover {
+      background: #1e3c72;
+    }
+    /* Footer */
+    footer {
+      background: #1e3c72;
+      color: #fff;
+      text-align: center;
+      padding: 20px 30px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>Senior 4 For Lyf</h1>
+    <nav>
+      <a href="#contact">Contact Us</a>
+      <div class="dropdown">
+        <div class="dropdown-toggle">View &#9662;</div>
+        <div class="dropdown-menu" id="viewDropdownMenu">
+          <a href="#images">Images</a>
+          <a href="#videos">Videos</a>
+          <a href="#audios">Audios</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h2>Welcome to Senior 4 For Lyf</h2>
+    <p>
+      We are delighted to have you here! Explore our extensive collection of images, engaging videos, and captivating audio tracks. Our content is designed to inspire and entertain, and we invite you to dive in and experience all that we offer.
+    </p>
+  </section>
+
+  <section id="images">
+    <h2>Images Gallery</h2>
+    <div class="image-grid" id="imagesGrid">
+    <a href="./images/1.jpg" data-lightbox="gallery" data-title="Image 1">
+    <img src="./images/1.jpg" alt="Image 1"></a>
+
+    <a href="./images/2.jpg" data-lightbox="gallery" data-title="Image 1">
+      <img src="./images/2.jpg" alt="Image 1"></a>
+
+      <a href="./images/3.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/3.jpg" alt="Image 1"></a>
+
+      <a href="./images/4.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/4.jpg" alt="Image 1"></a>
+
+      <a href="./images/5.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/5.jpg" alt="Image 1"></a>
+
+      <a href="./images/6.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/6.jpg" alt="Image 1"></a>
+
+      <a href="./images/7.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/7.jpg" alt="Image 1"></a>
+        
+      <a href="./images/8.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/8.jpg" alt="Image 1"></a>
+            
+      <a href="./images/9.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/9.jpg" alt="Image 1"></a>  
+
+      <a href="./images/10.jpg" data-lightbox="gallery" data-title="Image 1">
+        <img src="./images/10.jpg" alt="Image 1"></a>
+
+        <a href="./images/11.jpg" data-lightbox="gallery" data-title="Image 1">
+          <img src="./images/11.jpg" alt="Image 1"></a>
+      
+          <a href="./images/12.jpg" data-lightbox="gallery" data-title="Image 1">
+            <img src="./images/12.jpg" alt="Image 1"></a>
+      
+            <a href="./images/13.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/13.jpg" alt="Image 1"></a>
+      
+            <a href="./images/14.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/14.jpg" alt="Image 1"></a>
+      
+            <a href="./images/15.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/15.jpg" alt="Image 1"></a>
+      
+            <a href="./images/16.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/16.jpg" alt="Image 1"></a>
+      
+            <a href="./images/17.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/17.jpg" alt="Image 1"></a>
+              
+            <a href="./images/18.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/18.jpg" alt="Image 1"></a>
+                  
+            <a href="./images/19.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/19.jpg" alt="Image 1"></a>  
+      
+            <a href="./images/20.jpg" data-lightbox="gallery" data-title="Image 1">
+              <img src="./images/20.jpg" alt="Image 1"></a>
+
+              <a href="./images/21.jpg" data-lightbox="gallery" data-title="Image 1">
+                <img src="./images/21.jpg" alt="Image 1"></a>
+            
+                <a href="./images/22.jpg" data-lightbox="gallery" data-title="Image 1">
+                  <img src="./images/22.jpg" alt="Image 1"></a>
+            
+                  <a href="./images/23.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/23.jpg" alt="Image 1"></a>
+            
+                  <a href="./images/24.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/24.jpg" alt="Image 1"></a>
+            
+                  <a href="./images/25.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/25.jpg" alt="Image 1"></a>
+            
+                  <a href="./images/26.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/26.jpg" alt="Image 1"></a>
+            
+                  <a href="./images/27.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/27.jpg" alt="Image 1"></a>
+                    
+                  <a href="./images/28.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/28.jpg" alt="Image 1"></a>
+                        
+                  <a href="./images/29.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/29.jpg" alt="Image 1"></a>  
+            
+                  <a href="./images/30.jpg" data-lightbox="gallery" data-title="Image 1">
+                    <img src="./images/30.jpg" alt="Image 1"></a>
+
+                    <a href="./images/31.jpg" data-lightbox="gallery" data-title="Image 1">
+                      <img src="./images/31.jpg" alt="Image 1"></a>
+                  
+                      <a href="./images/32.jpg" data-lightbox="gallery" data-title="Image 1">
+                        <img src="./images/32.jpg" alt="Image 1"></a>
+                  
+                        <a href="./images/33.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/33.jpg" alt="Image 1"></a>
+                  
+                        <a href="./images/34.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/34.jpg" alt="Image 1"></a>
+                  
+                        <a href="./images/35.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/35.jpg" alt="Image 1"></a>
+                  
+                        <a href="./images/36.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/36.jpg" alt="Image 1"></a>
+                  
+                        <a href="./images/37.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/37.jpg" alt="Image 1"></a>
+                          
+                        <a href="./images/38.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/38.jpg" alt="Image 1"></a>
+                              
+                        <a href="./images/39.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/39.jpg" alt="Image 1"></a>  
+                  
+                        <a href="./images/40.jpg" data-lightbox="gallery" data-title="Image 1">
+                          <img src="./images/40.jpg" alt="Image 1"></a>
+                  
+                          <a href="./images/41.jpg" data-lightbox="gallery" data-title="Image 1">
+                            <img src="./images/41.jpg" alt="Image 1"></a>
+                        
+                            <a href="./images/42.jpg" data-lightbox="gallery" data-title="Image 1">
+                              <img src="./images/42.jpg" alt="Image 1"></a>
+                        
+                              <a href="./images/43.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/43.jpg" alt="Image 1"></a>
+                        
+                              <a href="./images/44.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/44.jpg" alt="Image 1"></a>
+                        
+                              <a href="./images/45.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/45.jpg" alt="Image 1"></a>
+                        
+                              <a href="./images/46.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/46.jpg" alt="Image 1"></a>
+                        
+                              <a href="./images/47.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/47.jpg" alt="Image 1"></a>
+                                
+                              <a href="./images/48.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/48.jpg" alt="Image 1"></a>
+                                    
+                              <a href="./images/49.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/49.jpg" alt="Image 1"></a>  
+                        
+                              <a href="./images/50.jpg" data-lightbox="gallery" data-title="Image 1">
+                                <img src="./images/50.jpg" alt="Image 1"></a>
+                        
+                                <a href="./images/51.jpg" data-lightbox="gallery" data-title="Image 1">
+                                  <img src="./images/51.jpg" alt="Image 1"></a>
+                              
+                                  <a href="./images/52.jpg" data-lightbox="gallery" data-title="Image 1">
+                                    <img src="./images/52.jpg" alt="Image 1"></a>
+                              
+                                    <a href="./images/53.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/53.jpg" alt="Image 1"></a>
+                              
+                                    <a href="./images/54.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/54.jpg" alt="Image 1"></a>
+                              
+                                    <a href="./images/55.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/55.jpg" alt="Image 1"></a>
+                              
+                                    <a href="./images/56.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/56.jpg" alt="Image 1"></a>
+                              
+                                    <a href="./images/57.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/57.jpg" alt="Image 1"></a>
+                                      
+                                    <a href="./images/58.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/58.jpg" alt="Image 1"></a>
+                                          
+                                    <a href="./images/59.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/59.jpg" alt="Image 1"></a>  
+                              
+                                    <a href="./images/60.jpg" data-lightbox="gallery" data-title="Image 1">
+                                      <img src="./images/60.jpg" alt="Image 1"></a>
+                        
+                                      <a href="./images/61.jpg" data-lightbox="gallery" data-title="Image 1">
+                                        <img src="./images/61.jpg" alt="Image 1"></a>
+                                    
+                                        <a href="./images/62.jpg" data-lightbox="gallery" data-title="Image 1">
+                                          <img src="./images/62.jpg" alt="Image 1"></a>
+                                    
+                                          <a href="./images/63.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/63.jpg" alt="Image 1"></a>
+                                    
+                                          <a href="./images/64.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/64.jpg" alt="Image 1"></a>
+                                    
+                                          <a href="./images/65.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/65.jpg" alt="Image 1"></a>
+                                    
+                                          <a href="./images/66.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/66.jpg" alt="Image 1"></a>
+                                    
+                                          <a href="./images/67.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/67.jpg" alt="Image 1"></a>
+                                            
+                                          <a href="./images/68.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/68.jpg" alt="Image 1"></a>
+                                                
+                                          <a href="./images/69.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/69.jpg" alt="Image 1"></a>  
+                                    
+                                          <a href="./images/70.jpg" data-lightbox="gallery" data-title="Image 1">
+                                            <img src="./images/70.jpg" alt="Image 1"></a>
+                        
+                                            <a href="./images/71.jpg" data-lightbox="gallery" data-title="Image 1">
+                                              <img src="./images/71.jpg" alt="Image 1"></a>
+                                          
+                                              <a href="./images/72.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                <img src="./images/72.jpg" alt="Image 1"></a>
+                                          
+                                                <a href="./images/73.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/73.jpg" alt="Image 1"></a>
+                                          
+                                                <a href="./images/74.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/74.jpg" alt="Image 1"></a>
+                                          
+                                                <a href="./images/75.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/75.jpg" alt="Image 1"></a>
+                                          
+                                                <a href="./images/76.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/76.jpg" alt="Image 1"></a>
+                                          
+                                                <a href="./images/77.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/77.jpg" alt="Image 1"></a>
+                                                  
+                                                <a href="./images/78.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/78.jpg" alt="Image 1"></a>
+                                                      
+                                                <a href="./images/79.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/79.jpg" alt="Image 1"></a>  
+                                          
+                                                <a href="./images/80.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                  <img src="./images/80.jpg" alt="Image 1"></a>     
+
+
+                                                  <a href="./images/81.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                    <img src="./images/81.jpg" alt="Image 1"></a>
+                                                
+                                                    <a href="./images/82.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                      <img src="./images/82.jpg" alt="Image 1"></a>
+                                                
+                                                      <a href="./images/83.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/83.jpg" alt="Image 1"></a>
+                                                
+                                                      <a href="./images/84.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/84.jpg" alt="Image 1"></a>
+                                                
+                                                      <a href="./images/85.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/85.jpg" alt="Image 1"></a>
+                                                
+                                                      <a href="./images/86.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/86.jpg" alt="Image 1"></a>
+                                                
+                                                      <a href="./images/87.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/87.jpg" alt="Image 1"></a>
+                                                        
+                                                      <a href="./images/88.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/88.jpg" alt="Image 1"></a>
+                                                            
+                                                      <a href="./images/89.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/89.jpg" alt="Image 1"></a>  
+                                                
+                                                      <a href="./images/90.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                        <img src="./images/90.jpg" alt="Image 1"></a>
+                                                
+                                                        <a href="./images/91.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                          <img src="./images/91.jpg" alt="Image 1"></a>
+                                                      
+                                                          <a href="./images/92.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                            <img src="./images/92.jpg" alt="Image 1"></a>
+                                                      
+                                                            <a href="./images/93.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/93.jpg" alt="Image 1"></a>
+                                                      
+                                                            <a href="./images/94.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/94.jpg" alt="Image 1"></a>
+                                                      
+                                                            <a href="./images/95.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/95.jpg" alt="Image 1"></a>
+                                                      
+                                                            <a href="./images/96.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/96.jpg" alt="Image 1"></a>
+                                                      
+                                                            <a href="./images/97.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/97.jpg" alt="Image 1"></a>
+                                                              
+                                                            <a href="./images/98.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/98.jpg" alt="Image 1"></a>
+                                                                  
+                                                            <a href="./images/99.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/99.jpg" alt="Image 1"></a>  
+                                                      
+                                                            <a href="./images/100.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                              <img src="./images/100.jpg" alt="Image 1"></a>
+                                                
+                                                              <a href="./images/101.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                <img src="./images/101.jpg" alt="Image 1"></a>
+                                                            
+                                                                <a href="./images/102.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                  <img src="./images/102.jpg" alt="Image 1"></a>
+                                                            
+                                                                  <a href="./images/103.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/103.jpg" alt="Image 1"></a>
+                                                            
+                                                                  <a href="./images/104.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/104.jpg" alt="Image 1"></a>
+                                                            
+                                                                  <a href="./images/105.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/105.jpg" alt="Image 1"></a>
+                                                            
+                                                                  <a href="./images/106.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/106.jpg" alt="Image 1"></a>
+                                                            
+                                                                  <a href="./images/107.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/107.jpg" alt="Image 1"></a>
+                                                                    
+                                                                  <a href="./images/108.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/108.jpg" alt="Image 1"></a>
+                                                                        
+                                                                  <a href="./images/109.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/109.jpg" alt="Image 1"></a>  
+                                                            
+                                                                  <a href="./images/110.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                    <img src="./images/110.jpg" alt="Image 1"></a>
+                                                
+                                                                    <a href="./images/111.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                      <img src="./images/111.jpg" alt="Image 1"></a>
+                                                                  
+                                                                      <a href="./images/112.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                        <img src="./images/112.jpg" alt="Image 1"></a>
+                                                                  
+                                                                        <a href="./images/113.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/113.jpg" alt="Image 1"></a>
+                                                                  
+                                                                        <a href="./images/114.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/114.jpg" alt="Image 1"></a>
+                                                                  
+                                                                        <a href="./images/115.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/115.jpg" alt="Image 1"></a>
+                                                                  
+                                                                        <a href="./images/116.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/116.jpg" alt="Image 1"></a>
+                                                                  
+                                                                        <a href="./images/117.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/117.jpg" alt="Image 1"></a>
+                                                                          
+                                                                        <a href="./images/118.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/118.jpg" alt="Image 1"></a>
+                                                                              
+                                                                        <a href="./images/119.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/119.jpg" alt="Image 1"></a>  
+                                                                  
+                                                                        <a href="./images/120.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                          <img src="./images/120.jpg" alt="Image 1"></a>
+      
+
+
+                                                                          <a href="./images/121.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                            <img src="./images/121.jpg" alt="Image 1"></a>
+                                                                        
+                                                                            <a href="./images/122.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                              <img src="./images/122.jpg" alt="Image 1"></a>
+                                                                        
+                                                                              <a href="./images/123.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/123.jpg" alt="Image 1"></a>
+                                                                        
+                                                                              <a href="./images/124.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/124.jpg" alt="Image 1"></a>
+                                                                        
+                                                                              <a href="./images/125.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/125.jpg" alt="Image 1"></a>
+                                                                        
+                                                                              <a href="./images/126.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/126.jpg" alt="Image 1"></a>
+                                                                        
+                                                                              <a href="./images/127.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/127.jpg" alt="Image 1"></a>
+                                                                                
+                                                                              <a href="./images/128.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/128.jpg" alt="Image 1"></a>
+                                                                                    
+                                                                              <a href="./images/129.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/129.jpg" alt="Image 1"></a>  
+                                                                        
+                                                                              <a href="./images/130.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                <img src="./images/130.jpg" alt="Image 1"></a>
+                                                                        
+                                                                                <a href="./images/131.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                  <img src="./images/131.jpg" alt="Image 1"></a>
+                                                                              
+                                                                                  <a href="./images/132.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                    <img src="./images/132.jpg" alt="Image 1"></a>
+                                                                              
+                                                                                    <a href="./images/133.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/133.jpg" alt="Image 1"></a>
+                                                                              
+                                                                                    <a href="./images/134.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/134.jpg" alt="Image 1"></a>
+                                                                              
+                                                                                    <a href="./images/135.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/135.jpg" alt="Image 1"></a>
+                                                                              
+                                                                                    <a href="./images/136.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/136.jpg" alt="Image 1"></a>
+                                                                              
+                                                                                    <a href="./images/137.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/137.jpg" alt="Image 1"></a>
+                                                                                      
+                                                                                    <a href="./images/138.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/138.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                    <a href="./images/139.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/139.jpg" alt="Image 1"></a>  
+                                                                              
+                                                                                    <a href="./images/140.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                      <img src="./images/140.jpg" alt="Image 1"></a>
+                                                                        
+                                                                                      <a href="./images/141.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                        <img src="./images/141.jpg" alt="Image 1"></a>
+                                                                                    
+                                                                                        <a href="./images/142.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                          <img src="./images/142.jpg" alt="Image 1"></a>
+                                                                                    
+                                                                                          <a href="./images/143.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/143.jpg" alt="Image 1"></a>
+                                                                                    
+                                                                                          <a href="./images/144.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/144.jpg" alt="Image 1"></a>
+                                                                                    
+                                                                                          <a href="./images/145.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/145.jpg" alt="Image 1"></a>
+                                                                                    
+                                                                                          <a href="./images/146.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/146.jpg" alt="Image 1"></a>
+                                                                                    
+                                                                                          <a href="./images/147.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/147.jpg" alt="Image 1"></a>
+                                                                                            
+                                                                                          <a href="./images/148.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/148.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                          <a href="./images/149.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/149.jpg" alt="Image 1"></a>  
+                                                                                    
+                                                                                          <a href="./images/150.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                            <img src="./images/150.jpg" alt="Image 1"></a>
+                                                                        
+                                                                                            <a href="./images/151.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                              <img src="./images/151.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                              <a href="./images/152.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                <img src="./images/152.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                                <a href="./images/153.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/153.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                                <a href="./images/154.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/154.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                                <a href="./images/155.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/155.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                                <a href="./images/156.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/156.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                                <a href="./images/157.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/157.jpg" alt="Image 1"></a>
+                                                                                                  
+                                                                                                <a href="./images/158.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/158.jpg" alt="Image 1"></a>
+                                                                                                      
+                                                                                                <a href="./images/159.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/159.jpg" alt="Image 1"></a>  
+                                                                                          
+                                                                                                <a href="./images/160.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                  <img src="./images/160.jpg" alt="Image 1"></a>
+                                                                                          
+                                                                                                  <a href="./images/161.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                    <img src="./images/161.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                    <a href="./images/162.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                      <img src="./images/162.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                      <a href="./images/163.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/163.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                      <a href="./images/164.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/164.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                      <a href="./images/165.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/165.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                      <a href="./images/166.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/166.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                      <a href="./images/167.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/167.jpg" alt="Image 1"></a>
+                                                                                                        
+                                                                                                      <a href="./images/168.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/168.jpg" alt="Image 1"></a>
+                                                                                                            
+                                                                                                      <a href="./images/169.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/169.jpg" alt="Image 1"></a>  
+                                                                                                
+                                                                                                      <a href="./images/170.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                        <img src="./images/170.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                        <a href="./images/171.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                          <img src="./images/171.jpg" alt="Image 1"></a>
+                                                                                                      
+                                                                                                          <a href="./images/172.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                            <img src="./images/172.jpg" alt="Image 1"></a>
+                                                                                                      
+                                                                                                            <a href="./images/173.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/173.jpg" alt="Image 1"></a>
+                                                                                                      
+                                                                                                            <a href="./images/174.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/174.jpg" alt="Image 1"></a>
+                                                                                                      
+                                                                                                            <a href="./images/175.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/175.jpg" alt="Image 1"></a>
+                                                                                                      
+                                                                                                            <a href="./images/176.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/176.jpg" alt="Image 1"></a>
+                                                                                                      
+                                                                                                            <a href="./images/177.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/177.jpg" alt="Image 1"></a>
+                                                                                                              
+                                                                                                            <a href="./images/178.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/178.jpg" alt="Image 1"></a>
+                                                                                                                  
+                                                                                                            <a href="./images/179.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/179.jpg" alt="Image 1"></a>  
+                                                                                                      
+                                                                                                            <a href="./images/180.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                              <img src="./images/180.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                              <a href="./images/181.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                <img src="./images/181.jpg" alt="Image 1"></a>
+                                                                                                            
+                                                                                                                <a href="./images/182.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                  <img src="./images/182.jpg" alt="Image 1"></a>
+                                                                                                            
+                                                                                                                  <a href="./images/183.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/183.jpg" alt="Image 1"></a>
+                                                                                                            
+                                                                                                                  <a href="./images/184.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/184.jpg" alt="Image 1"></a>
+                                                                                                            
+                                                                                                                  <a href="./images/185.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/185.jpg" alt="Image 1"></a>
+                                                                                                            
+                                                                                                                  <a href="./images/186.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/186.jpg" alt="Image 1"></a>
+                                                                                                            
+                                                                                                                  <a href="./images/187.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/187.jpg" alt="Image 1"></a>
+                                                                                                                    
+                                                                                                                  <a href="./images/188.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/188.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                  <a href="./images/189.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/189.jpg" alt="Image 1"></a>  
+                                                                                                            
+                                                                                                                  <a href="./images/190.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                    <img src="./images/190.jpg" alt="Image 1"></a>
+                                                                                                
+                                                                                                                    <a href="./images/191.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                      <img src="./images/191.jpg" alt="Image 1"></a>
+                                                                                                                  
+                                                                                                                      <a href="./images/192.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                        <img src="./images/192.jpg" alt="Image 1"></a>
+                                                                                                                  
+                                                                                                                        <a href="./images/193.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/193.jpg" alt="Image 1"></a>
+                                                                                                                  
+                                                                                                                        <a href="./images/194.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/194.jpg" alt="Image 1"></a>
+                                                                                                                  
+                                                                                                                        <a href="./images/195.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/195.jpg" alt="Image 1"></a>
+                                                                                                                  
+                                                                                                                        <a href="./images/196.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/196.jpg" alt="Image 1"></a>
+                                                                                                                  
+                                                                                                                        <a href="./images/197.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/197.jpg" alt="Image 1"></a>
+                                                                                                                          
+                                                                                                                        <a href="./images/198.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/198.jpg" alt="Image 1"></a>
+                                                                                                                              
+                                                                                                                        <a href="./images/199.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/199.jpg" alt="Image 1"></a>  
+                                                                                                                  
+                                                                                                                        <a href="./images/200.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                          <img src="./images/200.jpg" alt="Image 1"></a>     
+                                                                        
+                                                                        
+                                                                                                                          <a href="./images/201.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                            <img src="./images/201.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                            <a href="./images/202.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                              <img src="./images/202.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                              <a href="./images/203.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/203.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                              <a href="./images/204.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/204.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                              <a href="./images/205.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/205.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                              <a href="./images/206.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/206.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                              <a href="./images/207.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/207.jpg" alt="Image 1"></a>
+                                                                                                                                
+                                                                                                                              <a href="./images/208.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/208.jpg" alt="Image 1"></a>
+                                                                                                                                    
+                                                                                                                              <a href="./images/209.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/209.jpg" alt="Image 1"></a>  
+                                                                                                                        
+                                                                                                                              <a href="./images/210.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                <img src="./images/210.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                                <a href="./images/211.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                  <img src="./images/211.jpg" alt="Image 1"></a>
+                                                                                                                              
+                                                                                                                                  <a href="./images/212.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                    <img src="./images/212.jpg" alt="Image 1"></a>
+                                                                                                                              
+                                                                                                                                    <a href="./images/213.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/213.jpg" alt="Image 1"></a>
+                                                                                                                              
+                                                                                                                                    <a href="./images/214.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/214.jpg" alt="Image 1"></a>
+                                                                                                                              
+                                                                                                                                    <a href="./images/215.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/215.jpg" alt="Image 1"></a>
+                                                                                                                              
+                                                                                                                                    <a href="./images/216.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/216.jpg" alt="Image 1"></a>
+                                                                                                                              
+                                                                                                                                    <a href="./images/217.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/217.jpg" alt="Image 1"></a>
+                                                                                                                                      
+                                                                                                                                    <a href="./images/218.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/218.jpg" alt="Image 1"></a>
+                                                                                                                                          
+                                                                                                                                    <a href="./images/219.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/219.jpg" alt="Image 1"></a>  
+                                                                                                                              
+                                                                                                                                    <a href="./images/220.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                      <img src="./images/220.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                                      <a href="./images/221.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                        <img src="./images/221.jpg" alt="Image 1"></a>
+                                                                                                                                    
+                                                                                                                                        <a href="./images/222.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                          <img src="./images/222.jpg" alt="Image 1"></a>
+                                                                                                                                    
+                                                                                                                                          <a href="./images/223.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/223.jpg" alt="Image 1"></a>
+                                                                                                                                    
+                                                                                                                                          <a href="./images/224.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/224.jpg" alt="Image 1"></a>
+                                                                                                                                    
+                                                                                                                                          <a href="./images/225.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/225.jpg" alt="Image 1"></a>
+                                                                                                                                    
+                                                                                                                                          <a href="./images/226.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/226.jpg" alt="Image 1"></a>
+                                                                                                                                    
+                                                                                                                                          <a href="./images/227.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/227.jpg" alt="Image 1"></a>
+                                                                                                                                            
+                                                                                                                                          <a href="./images/228.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/228.jpg" alt="Image 1"></a>
+                                                                                                                                                
+                                                                                                                                          <a href="./images/229.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/229.jpg" alt="Image 1"></a>  
+                                                                                                                                    
+                                                                                                                                          <a href="./images/230.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                            <img src="./images/230.jpg" alt="Image 1"></a>
+                                                                                                                        
+                                                                                                                                            <a href="./images/231.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                              <img src="./images/231.jpg" alt="Image 1"></a>
+                                                                                                                                          
+                                                                                                                                              <a href="./images/232.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                <img src="./images/232.jpg" alt="Image 1"></a>
+                                                                                                                                          
+                                                                                                                                                <a href="./images/233.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                  <img src="./images/233.jpg" alt="Image 1"></a>
+                                                                                                                                          
+                                                                                                                                                <a href="./images/234.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                  <img src="./images/234.jpg" alt="Image 1"></a>
+                                                                                                                                          
+                                                                                                                                                <a href="./images/235.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                  <img src="./images/235.jpg" alt="Image 1"></a>
+                                                                                                                                          
+                                                                                                                                                <a href="./images/236.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                  <img src="./images/236.jpg" alt="Image 1"></a>
+                                                                                                                                          
+                                                                                                                                                <a href="./images/237.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                  <img src="./images/237.jpg" alt="Image 1"></a>
+                                                                                                                                                  
+                                                                                                                                                  <a href="./images/238.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                    <img src="./images/238.jpg" alt="Image 1"></a>
+                                                                                                                                                        
+                                                                                                                                                  <a href="./images/239.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                    <img src="./images/239.jpg" alt="Image 1"></a>  
+                                                                                                                                            
+                                                                                                                                                  <a href="./images/240.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                    <img src="./images/240.jpg" alt="Image 1"></a>
+                                                                                                                                      
+                                                                                                                                                    <a href="./images/241.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                      <img src="./images/241.jpg" alt="Image 1"></a>
+                                                                                                                                                  
+                                                                                                                                                      <a href="./images/242.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                        <img src="./images/242.jpg" alt="Image 1"></a>
+                                                                                                                                                  
+                                                                                                                                                        <a href="./images/243.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/243.jpg" alt="Image 1"></a>
+                                                                                                                                                  
+                                                                                                                                                        <a href="./images/244.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/244.jpg" alt="Image 1"></a>
+                                                                                                                                                  
+                                                                                                                                                        <a href="./images/245.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/245.jpg" alt="Image 1"></a>
+                                                                                                                                                  
+                                                                                                                                                        <a href="./images/246.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/246.jpg" alt="Image 1"></a>
+                                                                                                                                                  
+                                                                                                                                                        <a href="./images/247.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/247.jpg" alt="Image 1"></a>
+                                                                                                                                                          
+                                                                                                                                                        <a href="./images/248.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/248.jpg" alt="Image 1"></a>
+                                                                                                                                                              
+                                                                                                                                                        <a href="./images/249.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/249.jpg" alt="Image 1"></a>  
+                                                                                                                                                  
+                                                                                                                                                        <a href="./images/250.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                          <img src="./images/250.jpg" alt="Image 1"></a>
+                                                                                                                                      
+                                                                                                                                                          <a href="./images/251.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                            <img src="./images/251.jpg" alt="Image 1"></a>
+                                                                                                                                                        
+                                                                                                                                                            <a href="./images/252.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                              <img src="./images/252.jpg" alt="Image 1"></a>
+                                                                                                                                                        
+                                                                                                                                                              <a href="./images/253.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                                <img src="./images/253.jpg" alt="Image 1"></a>
+                                                                                                                                                        
+                                                                                                                                                              <a href="./images/254.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                                <img src="./images/254.jpg" alt="Image 1"></a>
+                                                                                                                                                        
+                                                                                                                                                              <a href="./images/255.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                                <img src="./images/255.jpg" alt="Image 1"></a>
+                                                                                                                                                        
+                                                                                                                                                              <a href="./images/256.jpg" data-lightbox="gallery" data-title="Image 1">
+                                                                                                                                                                <img src="./images/256.jpg" alt="Image 1"></a>
+
+  </section>
+
+  <!-- Videos Collection Section -->
+  <section id="videos">
+    <h2>Videos Collection</h2>
+    <div class="video-grid" id="videosGrid">
+      <iframe src="./videos/1.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/2.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/3.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/4.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/5.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/6.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/7.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/8.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/9.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/10.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/11.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/12.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/13.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/14.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/15.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/16.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/17.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/18.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/19.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/20.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/21.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/22.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/23.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/24.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/25.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/26.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/27.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/28.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/29.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/30.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/31.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/32.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/33.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/34.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/35.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/36.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/37.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/38.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/39.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/40.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/41.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/42.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/43.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/44.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/45.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/46.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/47.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/48.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/49.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/50.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/51.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/52.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/53.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/54.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/55.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/56.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/57.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/58.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/59.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/60.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/61.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/62.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/63.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/64.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/65.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/66.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/67.mp4" title="Video 1"></iframe>
+      <iframe src="./videos/68.mp4" title="Video 1"></iframe>
+    </div>
+  </section>
+
+  <!-- Audios Collection Section -->
+  <section id="audios">
+    <h2>Audios Collection</h2>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/1.m4a"></audio>
+    </div>
+
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/2.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/3.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/4.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/5.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/6.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/7.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/8.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/9.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/10.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/11.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/12.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/13.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/14.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/15.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/16.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/17.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/18.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/19.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/20.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/21.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/22.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/23.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/24.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/25.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/26.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/27.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/28.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/29.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/30.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/31.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/32.m4a"></audio>
+    </div>
+    <div class="audio-list" id="audiosList">
+      <audio controls="" src="./audios/33.m4a"></audio>
+    </div>
+
+  </section>
+
+  <!-- Contact Us Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form" id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Senior 4 For Lyf. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript Libraries -->
+  <!-- Lightbox2 JS for image lightbox effect -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+
+  <script>
+    // Dropdown Toggle Script
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdownMenu = document.getElementById('viewDropdownMenu');
+    
+    dropdownToggle.addEventListener('click', function(e) {
+      e.stopPropagation();
+      if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none';
+      } else {
+        dropdownMenu.style.display = 'block';
+        dropdownMenu.classList.add('animate');
+        setTimeout(() => {
+          dropdownMenu.classList.remove('animate');
+        }, 300);
+      }
+    });
+    
+    // Close dropdown when clicking outside
+    window.addEventListener('click', function(e) {
+      if (!dropdownToggle.contains(e.target)) {
+        dropdownMenu.style.display = 'none';
+      }
+    });
+
+    // Dynamically generate 235 images for the gallery
+    const imagesGrid = document.getElementById('imagesGrid');
+    for(let i = 1; i <= 235; i++){
+      const link = document.createElement('a');
+      link.href = `https://via.placeholder.com/600?text=Image+${i}`;
+      link.setAttribute('data-lightbox', 'gallery');
+      link.setAttribute('data-title', `Image ${i}`);
+      
+      const img = document.createElement('img');
+      img.src = `https://via.placeholder.com/150?text=Img+${i}`;
+      img.alt = `Image ${i}`;
+      
+      link.appendChild(img);
+      imagesGrid.appendChild(link);
+    }
+
+    // Dynamically generate 23 videos for the collection
+    const videosGrid = document.getElementById('videosGrid');
+    for(let i = 1; i <= 23; i++){
+      const iframe = document.createElement('iframe');
+      // Placeholder video embed (Rickroll – replace with your actual videos)
+      iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+      iframe.title = `Video ${i}`;
+      videosGrid.appendChild(iframe);
+    }
+
+    // Dynamically generate 15 audios for the collection
+    const audiosList = document.getElementById('audiosList');
+    for(let i = 1; i <= 15; i++){
+      const div = document.createElement('div');
+      div.className = 'audio-item';
+      const audio = document.createElement('audio');
+      audio.controls = true;
+      // Sample audio source (replace with your actual audio files)
+      audio.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+      div.appendChild(audio);
+      audiosList.appendChild(div);
+    }
+
+    // Example: Contact Form Submission Handling
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      // Here you can integrate professional email services (like EmailJS) or backend processing.
+      alert("Your message has been submitted!");
+      this.reset();
+    });
+  </script>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get Form Data
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    // Send email using EmailJS
+    emailjs.send("service_qyac9fd", "template_gyfbq6u", {
+      name: name,
+      email: email,
+      message: message
+    }).then(
+      function(response) {
+        alert("Message sent successfully!");
+        document.getElementById("contactForm").reset();
+      },
+      function(error) {
+        alert("Error sending message. Please try again.");
+      }
+    );
+  });
+</script>
+</body>
+</html>
